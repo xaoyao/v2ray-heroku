@@ -22,13 +22,16 @@ cat << EOF > /usr/local/etc/v2ray/config.json
                 "clients": [
                     {
                         "id": "$UUID",
-                        "alterId": 64
+                        "alterId": 5461
                     }
                 ],
                 "disableInsecureEncryption": true
             },
             "streamSettings": {
-                "network": "ws"
+                "network": "ws",
+                "wsSettings": {
+                    "path": "/ws"
+                }
             }
         }
     ],
